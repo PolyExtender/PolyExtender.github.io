@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PolyExtender</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+    }
+
+    nav {
+      box-shadow: none;
+    }
+
+    .brand-logo {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    a {
+      color: #16aaf2;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0c99dd;
+    }
+
+    .backer {
+      background: linear-gradient(135deg, #16aaf2 0%, #0c72b7 100%);
+    }
+
+    .backer-dark {
+      background: #0c99dd;
+    }
+
+    .hero-section {
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 50px;
+    }
+
+    .logo-pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .hero-title {
+      font-weight: 700;
+      margin: 20px 0 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+      font-weight: 300;
+      margin-top: 0;
+      opacity: 0.9;
+    }
+
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .card-content {
+      padding: 24px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .card-action {
+      background-color: #ffffff;
+      padding: 16px 24px;
+      border-top: none;
+    }
+
+    .card-link {
+      color: #16aaf2 !important;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 14px;
+    }
+
+    .card-link:hover {
+      color: #0c99dd !important;
+    }
+
+    .section-title {
+      font-weight: 600;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background-color: #16aaf2;
+      bottom: -10px;
+      left: 0;
+    }
+
+    footer {
+      padding: 20px 0;
+      color: #90a4ae;
+      font-weight: 300;
+    }
+
+    .preloader-wrapper {
+      display: block;
+      margin: 50px auto;
+    }
+
+    /* Animation for cards */
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="z-depth-1">
+    <nav class="z-depth-0 backer-dark">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">PolyExtender</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero-section backer white-text valign-wrapper">
+    <div id="particles" class="particles"></div>
+    <div class="container center-align hero-content">
+      <img src="https://r2.fivemanage.com/image/XAN6kdmkqwml.png" style="height: 140px;" alt="PolyExtender Logo" class="logo-pulse">
+      <h1 class="hero-title">PolyExtender</h1>
+      <h4 class="hero-subtitle">Enhance Your Stream Experience</h4>
+      <a href="#projects" class="btn-large white black-text waves-effect waves-light pulse" style="margin-top: 30px;">Explore Projects</a>
+    </div>
+  </div>
+
+  <main class="container" style="padding: 4rem 0">
+    <section id="projects">
+      <h2 class="section-title">Our Projects</h2>
+      <p class="flow-text grey-text" style="margin-bottom: 40px;">Discover our collection of extensions designed to enhance your streaming experience.</p>
+      
+      <div id="repo-cards" class="row">
+        <div class="center">
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="about" style="margin-top: 80px;">
+      <h2 class="section-title">About PolyExtender</h2>
+      <div class="row">
+        <div class="col s12 m8">
+          <p class="flow-text">PolyExtender is dedicated to creating powerful extensions that enhance your streaming platforms. Our tools are designed to provide more functionality, better customization, and an overall improved experience.</p>
+        </div>
+        <div class="col s12 m4 center-align">
+          <div class="card-panel backer white-text" style="border-radius: 10px;">
+            <i class="material-icons large">extension</i>
+            <h5>Powerful Extensions</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container section center-align">
+    <div class="divider" style="margin-bottom: 20px;"></div>
+    <p>&copy; 2025 PolyExtender • All Rights Reserved</p>
+    <div class="social-icons" style="margin-top: 10px;">
+      <a href="#" class="grey-text text-darken-1"><i class="material-icons">code</i></a>
+      <a href="#" class="grey-text text-darken-1"><i class="material-icons">rss_feed</i></a>
+      <a href="#" class="grey-text text-darken-1"><i class="material-icons">mail</i></a>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+
+  <script>
+    // Initialize Materialize components
+    document.addEventListener('DOMContentLoaded', function() {
+      M.AutoInit();
+    });
+
+    // Particles background
+    window.onload = function() {
+      if(typeof Particles !== 'undefined') {
+        Particles.init({
+          selector: '#particles',
+          color: ['#ffffff', '#f5f5f5'],
+          connectParticles: true,
+          maxParticles: 100,
+          responsive: [
+            { breakpoint: 768, options: { maxParticles: 60 } },
+            { breakpoint: 425, options: { maxParticles: 30 } }
+          ]
+        });
+      }
+    };
+
+    // Function to generate visually pleasing colors
+    function getRandomColor() {
+      // Array of visually pleasing colors
+      const colors = [
+        '#3498db', '#2ecc71', '#9b59b6', '#e74c3c', '#1abc9c',
+        '#34495e', '#f1c40f', '#e67e22', '#16a085', '#2980b9',
+        '#8e44ad', '#c0392b', '#d35400', '#27ae60', '#2c3e50'
+      ];
+      
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Fetch repositories from PolyExtended GitHub organization
+    const org = 'polyextender';
+    fetch(`https://api.github.com/orgs/${org}/repos`)
+      .then(response => response.json())
+      .then(repos => {
+        // Select the container for repository cards
+        const repoCards = document.getElementById('repo-cards');
+        repoCards.innerHTML = ''; // Clear loading spinner
+        
+        // Filter out repositories with specific names
+        const excludedNames = ['.github', 'polyextended.github.io', 'PolyExtended'];
+        const filteredRepos = repos.filter(repo => !excludedNames.includes(repo.name));
+        
+        // If no repos found
+        if (filteredRepos.length === 0) {
+          repoCards.innerHTML = `
+            <div class="col s12 center-align">
+              <div class="card-panel grey lighten-4">
+                <span class="grey-text text-darken-2">No repositories found</span>
+              </div>
+            </div>
+          `;
+          return;
+        }
+
+        // Iterate through the repositories and create cards
+        filteredRepos.forEach((repo, index) => {
+          // Create card element
+          const card = document.createElement('div');
+          card.classList.add('col', 's12', 'm6', 'l4', 'fade-in');
+          card.style.animationDelay = `${index * 0.1}s`;
+
+          const cardColor = getRandomColor();
+          const description = repo.description || 'Stream enhancement tool for an immersive viewing experience.';
+          
+          // Determine an appropriate icon based on repository name or description
+          let icon = 'extension';
+          if (repo.name.toLowerCase().includes('chat') || repo.description && repo.description.toLowerCase().includes('chat')) {
+            icon = 'chat';
+          } else if (repo.name.toLowerCase().includes('stream') || repo.description && repo.description.toLowerCase().includes('stream')) {
+            icon = 'play_circle_filled';
+          } else if (repo.name.toLowerCase().includes('tool') || repo.description && repo.description.toLowerCase().includes('tool')) {
+            icon = 'build';
+          }
+
+          card.innerHTML = `
+            <div class="card hoverable">
+              <div class="card-content white-text" style="background-color: ${cardColor}; min-height: 180px;">
+                <i class="material-icons right">code</i>
+                <span class="card-title">${repo.name}</span>
+                <p>${description}</p>
+              </div>
+              <div class="card-action">
+                <a href="${repo.homepage || repo.html_url}" class="card-link">
+                  <i class="material-icons left tiny">${icon}</i>Explore
+                </a>
+                <span class="right grey-text text-darken-1">
+                  <i class="material-icons tiny">star</i> ${repo.stargazers_count || 0}
+                </span>
+              </div>
+            </div>
+          `;
+
+          // Append the card to the container
+          repoCards.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching repositories:', error);
+        document.getElementById('repo-cards').innerHTML = `
+          <div class="col s12 center-align">
+            <div class="card-panel red lighten-4">
+              <span class="red-text text-darken-3">Error loading repositories. Please try again later.</span>
+            </div>
+          </div>
+        `;
+      });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
